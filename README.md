@@ -1,66 +1,48 @@
-## Foundry
+# Foundry DAO Governance
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+![Alt text](image.png)
 
-Foundry consists of:
+1. We are going to have a contract controlled by a DAO ✅
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+2. Every transaction that the DAO wants to send has to be voted on ✅
 
-## Documentation
+3. We will user ERC20 tokens for voting ✅
 
-https://book.getfoundry.sh/
+## Quickstart
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```
+git clone https://github.com/Solidityarchitect/foundry-dao
+cd foundry-dao
+forge install
+forge build
 ```
 
-### Test
+# Usage
 
-```shell
-$ forge test
+## Test
+
+```
+forge test
 ```
 
-### Format
+## Deploy
 
-```shell
-$ forge fmt
+I did not write deploy scripts for this project, you can if you'd like!
+
+## Estimate gas
+
+You can estimate how much gas things cost by running:
+
+```
+forge snapshot
 ```
 
-### Gas Snapshots
+And you'll see and output file called `.gas-snapshot`
 
-```shell
-$ forge snapshot
+# Formatting
+
+To run code formatting:
+
 ```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+forge fmt
 ```
